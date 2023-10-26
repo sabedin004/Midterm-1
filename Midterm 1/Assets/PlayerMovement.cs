@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //variable for movement
-    public float speed = 1f;
-    public float yBorder = 1f;
+    public float speed = 0.01f;
+   
 
     
 
@@ -20,12 +20,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -0.1)    //when A is pressed
+        
+        if (Input.GetKeyDown(KeyCode.A) && transform.position.x > -11)  //when A is pressed)
         {
             transform.position = new Vector2(transform.position.x - speed, transform.position.y);   //move left
         }
 
-        else if (Input.GetKey(KeyCode.D) && transform.position.x < 0.1)    //when D is pressed
+        else if (Input.GetKeyDown(KeyCode.D) && transform.position.x <11) //when D is pressed
         {
             transform.position = new Vector2(transform.position.x + speed, transform.position.y); //move right
         }

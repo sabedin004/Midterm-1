@@ -9,15 +9,15 @@ public class FireMove : MonoBehaviour
     public float ySpeed = 0; // Variable for y speed
 
     //variable for borders
-   
-    private float yBorder = 4.5f; //variavle for verticle border
+
+    private float yBorder = 6.5f; //variavle for verticle border
 
 
     // Start is called before the first frame update
     void Start()
     {
-      
-        ySpeed = 0.0125f; //declare value for verticle speed
+
+        ySpeed = 0.05f;//declare value for verticle speed
     }
 
     // Update is called once per frame
