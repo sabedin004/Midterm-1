@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FireMove : MonoBehaviour
 {
@@ -34,6 +35,18 @@ public class FireMove : MonoBehaviour
         if (transform.position.y <= -yBorder)
         {
             ySpeed *= -1;
+        }
+
+    }
+
+    //Funtion for collision
+    void OnTriggerEnter2D(Collider2D other)
+    {
+     
+        if (other.tag == "Obstacle")      //check if the other object is an obstacle
+        {
+            //Debug.Log("Hit")
+            SceneManager.LoadScene("SampleScene");                //change to end scene
         }
 
     }
