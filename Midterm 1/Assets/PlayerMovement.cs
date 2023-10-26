@@ -31,7 +31,12 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x + speed, transform.position.y); //move right
         }
+        
 
+        if (transform.position.x > 10)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
         
 
     }
