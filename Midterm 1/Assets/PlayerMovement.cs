@@ -35,14 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (transform.position.x > 10)
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("EndScene");         //when player reaches at the right end change to EndScene
         }
         
 
     }
 
     //Funtion for collision
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)                           //if player collides with any fireball end game and restart
     {
 
         if (other.tag == "Obstacle")      //check if the other object is an obstacle
